@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Condicional Switch</title>
+</head>
+<body>
+	<script type="">
+		var num1 = prompt('Number 1:')
+		var num2 = prompt('Number 2:')
+		var op = prompt('Operação:')
+
+		num1 = parseFloat(num1)
+		num2 = parseFloat(num2)
+
+		switch(op) {
+			case '+':
+				console.log(num1 + num2)
+			break;
+			case '-':
+				console.log(num1 - num2)
+			break;
+			case '*':
+				console.log(num1 * num2)
+			break;
+			case '/':
+				console.log(num1 / num2)
+			break;
+			default:
+				console.error('Error')
+
+		}
+	</script>
+
+</body>
+</html>
