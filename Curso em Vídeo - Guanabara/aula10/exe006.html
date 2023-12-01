@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 20pt Arial;
+            background: rgb(43, 139, 42);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id='area' onclick="cliclar()" onmouseenter="entrou()" onmouseout="saiu()">
+    <!--<div id='area' onclick="cliclar()" onmouseenter="entrou()" onmouseout="saiu()">-->
+        Interaja...
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area')
+        //criação dos listener para monitoramento opção para eventos fora do HTML
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrou)
+        a.addEventListener('mouseout', saiu)
+
+        function cliclar(){
+            a.innerText = 'Clicou!!'
+            a.style.background = 'red'    
+        }
+        function entrou(){
+            a.innerText = 'entrou!!'
+
+        }
+        function saiu(){
+            a.innerText = 'Saiu!!'
+            a.style.background = 'green'    
+
+        }
+    </script>
+</body>
+</html>
